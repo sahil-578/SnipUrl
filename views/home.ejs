@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snip Url</title>
+    <style>
+
+        *{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        body{
+            background-color: #EDFDFC;
+        }
+
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo{
+            height: 200px;
+            width: auto;
+        }
+
+        .navbar a{
+            font-size: 18px;
+            color: #282828;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+        }
+
+        .navbar a:hover , 
+        .navbar a.active
+        {
+            color: #00abf0;
+        }
+
+        .main-container {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            padding: 0 8%;
+        }
+
+        .home-container{
+            max-width: 1200px;
+        }
+
+        .home-container h1{
+            font-size: 56px;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+       <img src="images/SNIP-removebg-preview.png" class="logo" alt="SnipUrl Logo">
+
+       <nav class="navbar">
+            <a href="" class="active">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+       </nav>
+</header>
+
+<section class="main-container">
+    <div class="home-container">
+    <h1>SnipURL ~ LINK SHORTENER</h1>
+        <form action="/url" method="POST">
+            <label for="">Enter Your Original URL</label>
+            <input type="text" name="url" placeholder="https://example.com">
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
