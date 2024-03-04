@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "172e4e90-66bc-4680-aee8-7edd8858c57a",
+		"name": "Snip Url",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32953031"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\" : \"https://google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/url",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/3wgNFkywe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/3wgNFkywe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"3wgNFkywe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/url/analytics/3wgNFkywe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/url/analytics/3wgNFkywe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"url",
+						"analytics",
+						"3wgNFkywe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
