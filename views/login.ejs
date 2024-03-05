@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnipUrl | Login</title>
+    
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            background: #ececec;
+        }
+
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            padding: 30px;
+            border-radius: 10px;
+            background: #ececec;
+            box-shadow: 10px 10px 15px #c7c4c4 , -10px -10px 15px #fff;
+        }
+
+        .box img{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 6px 6px 12px #c7c4c4, -6px -6px 12px #fff;
+        }
+
+        .box h1{
+            font-size: 32px;
+            color: #003257;
+            font-weight: 700;
+            margin: 5px 0 10px;
+        }
+
+        .box input{
+            width: 100%;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+            font-size: 18px;
+            background: #ececec;
+            box-shadow: inset 10px 10px 15px #c7c4c4, inset -10px -10px 15px #fff;
+        }
+
+        .box button{
+            width: 100%;
+            padding: 20px 0;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            background: #02c8bb;
+            transition: .3s;
+        }
+
+        .box button:hover{
+            background: #387f8e;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="images/snip_nobg.png" alt="logo">
+        <h1>Login Form</h1>
+        <form action="/user/login" method="POST">
+            <input type="email" placeholder="Email" required name = 'email'>
+            <input type="password" placeholder="Password" required name = 'password'>
+            <button type="submit">Login</button> 
+        </form>
+    </div>
+</body>
+</html>
