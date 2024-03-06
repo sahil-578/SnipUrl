@@ -26,6 +26,9 @@ async function handleGenerateNewShortUrl(req, res) {
 async function handleGetAnalytics(req, res) {
     const shortId = req.params.shortId;
     const result = await URL.findOne({shortId});
+    if(!result) {
+        return res.json({totalClicks : 0, analytics : 0});
+    }
     return res.json({totalClicks : result.visitHistory.length, 
     analytics : result.visitHistory.length,
     });
