@@ -14,6 +14,7 @@ const urlRoute = require('./routes/url');
 const staticRoute = require('./routes/staticRouter');
 const userRoute = require('./routes/user');
 const contactRoute = require('./routes/contact');
+const aboutRoute = require('./routes/about');
 
 const URL = require('./models/url');
 
@@ -29,6 +30,7 @@ app.use('/url', restrictToLoginUserOnly, urlRoute);
 app.use('/', staticRoute);
 app.use('/user', userRoute);
 app.use('/contact', contactRoute);
+app.use('/about', aboutRoute);
 
 app.get("/url/:shortId", async (req, res) => {
     const shortId = req.params.shortId;

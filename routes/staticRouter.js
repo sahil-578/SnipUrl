@@ -19,4 +19,8 @@ router.get('/contact', (req, res) => {
     return res.render('contact', {message : message});
 });
 
+router.get('/about', (req, res) => {
+    return res.render('about');
+});
+
 module.exports = router;
