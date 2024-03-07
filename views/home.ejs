@@ -1,92 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snip Url</title>
     <style>
+      * {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        padding: 0;
+      }
 
-        *{
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-            box-sizing: border-box;
-            padding: 0;
-        }
+      body {
+        background-color: #edfdfc;
+      }
 
-        body{
-            background-color: #EDFDFC;
-        }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+      }
 
-        header{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
+      .logo {
+        height: 200px;
+        width: auto;
+      }
 
-        .logo{
-            height: 200px;
-            width: auto;
-        }
+      .navbar a {
+        font-size: 18px;
+        color: #282828;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
+      }
 
-        .navbar a{
-            font-size: 18px;
-            color: #282828;
-            text-decoration: none;
-            font-weight: 500;
-            margin-left: 35px;
-        }
+      .navbar a:hover,
+      .navbar a.active {
+        color: #00abf0;
+      }
 
-        .navbar a:hover , 
-        .navbar a.active
-        {
-            color: #00abf0;
-        }
+      .main-container {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        padding: 0 10%;
+      }
 
-        .main-container {
-            display: flex;
-            align-items: center;
-            height: 100vh;
-            padding: 0 8%;
-        }
+      .home-container {
+        width: 100%;
+        max-width: 1800px;
+      }
 
-        .home-container{
-            max-width: 1200px;
-        }
+      .home-container h1 {
+        font-size: 56px;
+        font-weight: 700;
+        /* text-align: center; */
+        margin-bottom: 20px;
+      }
 
-        .home-container h1{
-            font-size: 56px;
-            font-weight: 700;
-        }
+      label {
+        font-size: 25px;
+        color: #333;
+        font-weight: 500;
+        padding-right: 10px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        max-width: 50%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input::placeholder {
+        font-weight: 300;
+        color: #333;
+        letter-spacing: 1.5px;
+        font-size: 16px;
+      }
+
+      button {
+        font-family: system-ui, sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: none;
+        margin: 0.1em;
+        padding: 0.5em 1em;
+      }
+
+      button {
+        --b: 3px; /* border thickness */
+        --s: 0.15em; /* size of the corner */
+        --c: #3288bd;
+
+        padding: calc(0.05em + var(--s)) calc(0.3em + var(--s));
+        color: var(--c);
+        --_p: var(--s);
+        background: conic-gradient(
+            from 90deg at var(--b) var(--b),
+            #0000 90deg,
+            var(--c) 0
+          )
+          var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+          calc(100% - var(--b) - 2 * var(--_p));
+        transition: 0.3s linear, color 0s, background-color 0s;
+        outline: var(--b) solid #0000;
+        outline-offset: 0.2em;
+      }
+
+      button:hover,
+      button:focus-visible {
+        --_p: 0px;
+        outline-color: var(--c);
+        outline-offset: 0.05em;
+      }
+      button:active {
+        background: var(--c);
+        color: #fff;
+      }
+
+      p {
+        font-size: 18px;
+        color: #333;
+        font-weight: 500;
+        margin: 10px;
+        text-align: center;
+        padding: 20px;
+      }
 
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-       <img src="images/SNIP-removebg-preview.png" class="logo" alt="SnipUrl Logo">
+      <img
+        src="images/SNIP-removebg-preview.png"
+        class="logo"
+        alt="SnipUrl Logo"
+      />
 
-       <nav class="navbar">
-            <a href="" class="active">Home</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-       </nav>
-</header>
+      <nav class="navbar">
+        <a href="" class="active">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/signup">Sign Up</a>
+        <span><a href="/login">Login</a></span>
+      </nav>
+    </header>
 
-<section class="main-container">
-    <div class="home-container">
-    <h1>SnipURL ~ LINK SHORTENER</h1>
+    <section class="main-container">
+      <div class="home-container">
+        <h1>SnipURL ~ LINK SHORTENER</h1>
         <form action="/url" method="POST">
-            <label for="">Enter Your Original URL</label>
-            <input type="text" name="url" placeholder="https://example.com">
-            <button type="submit">Generate</button>
+          <label for="">Enter Your Original URL</label>
+          <input type="text" name="url" placeholder="https://example.com" required/>
+          <button type="submit">Generate</button>
         </form>
-    </div>
-</section>
 
-</body>
+        <% if (locals.id) { %>
+        <p>URL Generated : http://localhost:3000/url/<%= id %></p>
+        <% } %>
+      </div>
+    </section>
+  </body>
 </html>
